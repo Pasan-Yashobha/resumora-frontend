@@ -584,7 +584,7 @@ const ProfileSection: React.FC<{ resume: Resume; onUpdate: (s: keyof Resume, f: 
           <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleImageChange} />
         </div>
       </div>
-      <Input label="Full name" placeholder="Alex Johnson" value={p.fullName || ''} onChange={(e) => onUpdate('profileInfo', 'fullName', e.target.value)} />
+      <Input label="Full name" placeholder="Pasan Yashobha" value={p.fullName || ''} onChange={(e) => onUpdate('profileInfo', 'fullName', e.target.value)} />
       <Input label="Job title / Designation" placeholder="Senior Software Engineer" value={p.designation || ''} onChange={(e) => onUpdate('profileInfo', 'designation', e.target.value)} />
       <Textarea label="Professional summary" placeholder="Write 2–3 sentences about your background…" value={p.summary || ''} onChange={(e) => onUpdate('profileInfo', 'summary', e.target.value)} rows={4} />
     </div>
@@ -597,9 +597,9 @@ const ContactSection: React.FC<{ resume: Resume; onUpdate: (s: keyof Resume, f: 
   return (
     <div className="flex flex-col gap-4">
       <SectionHeader title="Contact Information" />
-      <Input label="Email" type="email" placeholder="alex@example.com" value={c.email || ''} onChange={(e) => onUpdate('contactInfo', 'email', e.target.value)} />
-      <Input label="Phone" placeholder="+1 555 000 0000" value={c.phone || ''} onChange={(e) => onUpdate('contactInfo', 'phone', e.target.value)} />
-      <Input label="Location" placeholder="San Francisco, CA" value={c.location || ''} onChange={(e) => onUpdate('contactInfo', 'location', e.target.value)} />
+      <Input label="Email" type="email" placeholder="pasan@example.com" value={c.email || ''} onChange={(e) => onUpdate('contactInfo', 'email', e.target.value)} />
+      <Input label="Phone" placeholder="+94 71 123 4567" value={c.phone || ''} onChange={(e) => onUpdate('contactInfo', 'phone', e.target.value)} />
+      <Input label="Location" placeholder="Panadura" value={c.location || ''} onChange={(e) => onUpdate('contactInfo', 'location', e.target.value)} />
       <Input label="LinkedIn" placeholder="linkedin.com/in/yourprofile" value={c.linkedIn || ''} onChange={(e) => onUpdate('contactInfo', 'linkedIn', e.target.value)} />
       <Input label="GitHub" placeholder="github.com/yourhandle" value={c.github || ''} onChange={(e) => onUpdate('contactInfo', 'github', e.target.value)} />
       <Input label="Website / Portfolio" placeholder="yourportfolio.com" value={c.website || ''} onChange={(e) => onUpdate('contactInfo', 'website', e.target.value)} />
@@ -620,7 +620,7 @@ const WorkExpSection: React.FC<{ resume: Resume; onUpdate: (f: keyof Resume, v: 
       {items.length === 0 && <EmptyHint text="No experience added yet." />}
       {items.map((item, idx) => (
         <CollapsibleCard key={item.id} title={item.company || `Position ${idx + 1}`} subtitle={item.role} onRemove={() => remove(item.id!)}>
-          <Input label="Company" placeholder="Acme Inc." value={item.company} onChange={(e) => update(item.id!, 'company', e.target.value)} />
+          <Input label="Company" placeholder="Abc Company" value={item.company} onChange={(e) => update(item.id!, 'company', e.target.value)} />
           <Input label="Role / Title" placeholder="Senior Developer" value={item.role} onChange={(e) => update(item.id!, 'role', e.target.value)} />
           <DateSelect label="Start date" value={item.startDate} onChange={(v) => update(item.id!, 'startDate', v)} />
           <DateSelect label="End date" value={item.endDate} onChange={(v) => update(item.id!, 'endDate', v)} allowPresent />
@@ -644,8 +644,8 @@ const EducationSection: React.FC<{ resume: Resume; onUpdate: (f: keyof Resume, v
       {items.length === 0 && <EmptyHint text="No education added yet." />}
       {items.map((item, idx) => (
         <CollapsibleCard key={item.id} title={item.institution || `Education ${idx + 1}`} subtitle={item.degree} onRemove={() => remove(item.id!)}>
-          <Input label="Degree" placeholder="B.Sc. Computer Science" value={item.degree} onChange={(e) => update(item.id!, 'degree', e.target.value)} />
-          <Input label="Institution" placeholder="MIT" value={item.institution} onChange={(e) => update(item.id!, 'institution', e.target.value)} />
+          <Input label="Degree" placeholder="BSc. in IT" value={item.degree} onChange={(e) => update(item.id!, 'degree', e.target.value)} />
+          <Input label="Institution" placeholder="UOM" value={item.institution} onChange={(e) => update(item.id!, 'institution', e.target.value)} />
           <YearSelect label="Start year" value={item.startDate} onChange={(v) => update(item.id!, 'startDate', v)} />
           <YearSelect label="End year (or expected)" value={item.endDate} onChange={(v) => update(item.id!, 'endDate', v)} />
         </CollapsibleCard>
@@ -739,7 +739,7 @@ const LanguagesSection: React.FC<{ resume: Resume; onUpdate: (f: keyof Resume, v
       {items.map((item) => (
         <div key={item.id} className="card p-4 flex flex-col gap-3">
           <div className="flex items-center gap-2">
-            <Input placeholder="e.g. English, Spanish…" value={item.name} onChange={(e) => update(item.id!, 'name', e.target.value)} className="flex-1" />
+            <Input placeholder="e.g. English, Sinhala…" value={item.name} onChange={(e) => update(item.id!, 'name', e.target.value)} className="flex-1" />
             <button onClick={() => remove(item.id!)} className="p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors shrink-0">
               <RiDeleteBinLine className="w-3.5 h-3.5" />
             </button>
