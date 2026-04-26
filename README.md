@@ -1,6 +1,6 @@
 # Resumora Frontend
 
-> **Design Your Career Identity** — A modern, full-featured SaaS resume builder built with React, TypeScript, and Tailwind CSS.
+> **Design Your Career Identity** - A modern, full-featured SaaS resume builder built with React, TypeScript, and Tailwind CSS.
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
@@ -32,7 +32,7 @@
 | State | Zustand (persisted) |
 | Routing | React Router v6 |
 | HTTP | Axios |
-| Payments | Stripe.js + React Stripe Elements |
+| Payments | Stripe.js + React Stripe Elements (Stripe Test Mode) |
 | PDF | html2canvas + jsPDF |
 | Icons | React Icons |
 | Notifications | React Hot Toast |
@@ -46,7 +46,7 @@
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/resumora-frontend.git
+git clone https://github.com/Pasan-Yashobha/resumora-frontend.git
 cd resumora-frontend
 npm install
 cp .env.example .env.local
@@ -56,13 +56,13 @@ cp .env.example .env.local
 
 ```env
 VITE_API_URL=http://localhost:8080/api
-VITE_STRIPE_PUBLISHABLE_KEY=pk_test_your_key_here
+VITE_STRIPE_PUBLISHABLE_KEY=pk_test_publishable_key
 ```
 
 ### Run
 
 ```bash
-npm run dev        # Development — http://localhost:5173
+npm run dev        # Development - http://localhost:5173
 npm run build      # Production build
 npm run preview    # Preview production build
 ```
@@ -82,4 +82,4 @@ Build command: `npm run build` | Publish directory: `dist`
 
 ---
 
-Made with love by Pasan Yashobha
+Made with love by Pasan Yashobha.
